@@ -16,20 +16,24 @@
 
 	<ui:define name="content">
         <h:form>
-        	<h:panelGrid columns="2">
+        			Enter your name <h:inputText value="#{aowBean.firstName}"/> <h:inputText id="surname" value="#{aowBean.surname}" />	
+			<h:commandButton value="Verder" action="overview"/>
+        
+<!--         	<h:panelGrid columns="2">
         	    #{msg.column_FirstName}
         	    <h:inputText id="firstName" value="#{user.firstName}" />
-        	    #{msg.column_Surname}
-        	    <h:inputText id="surname" value="#{user.surname}" />
-<!--         		#{msg.column_BirthDate}
+        	    #{msg.column_Surname} -->
+<!--         	    <h:inputText id="surname" value="#{user.surname}" /> -->
+         	<!-- 	#{msg.column_BirthDate}
         		<h:column>
+        			<h:inputText id="birthDate" value="#{user.birthDate}" />
         			<input type="date" min="1900-01-01" max="2100-12-31" value="2014-07-11"/>
-        		</h:column>	 -->
-        		
-        		<h:commandButton value="Verder" action="overview"/>
-        		
-        	</h:panelGrid>
-        		
+        		</h:column>
+        		 -->
+ <!--        		<h:commandButton value="submit" action="overview"/>
+  -->       		
+   <!--      	</h:panelGrid>
+    -->     		
         </h:form>
 	</ui:define>
 

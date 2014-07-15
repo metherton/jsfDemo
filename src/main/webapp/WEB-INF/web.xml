@@ -22,6 +22,13 @@
   <listener>
     <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
   </listener>
+  
+    <session-config>
+        <session-timeout>
+            300
+        </session-timeout>
+    </session-config>  
+    
   <welcome-file-list>
   	<welcome-file>home.xhtml</welcome-file>
   </welcome-file-list>
