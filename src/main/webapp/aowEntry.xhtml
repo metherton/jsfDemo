@@ -11,12 +11,17 @@
 <ui:composition template="/templates/masterLayout.xhtml">
 
 	<ui:define name="heading">
-		#{msg.home}
-	</ui:define>
-	<ui:define name="content">
-		<h:link id="aowLink" value="AOW" outcome="#{msg.goToAow}" />
+		AOW Entry
 	</ui:define>
 
+	<ui:define name="content">
+        <h:form>
+        	<h:panelGrid columns="2">
+				Enter your bsn <h:inputText id="bsn" value="#{aowBean.bsn}"/>
+			</h:panelGrid>
+			<h:commandButton id="submit" value="Verder" action="#{aowBean.aowDetails}"/> 
+        </h:form>
+	</ui:define>
 </ui:composition>
 </body>
 </html>
