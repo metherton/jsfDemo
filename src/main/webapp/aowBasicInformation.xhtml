@@ -21,28 +21,21 @@
 			<p:tabView>
 			
 				<p:tab title="Basic Information">
-					<!-- <h:panelGrid columns="2"> -->
 					<p:panelGrid columns="2">
 						#{msg.column_Bsn}	<h:outputText id="bsn" value="#{aowBean.user.bsn}"/>
 						#{msg.column_Surname}	<h:inputText id="surname" value="#{aowBean.user.surname}"/>
 						#{msg.column_FirstName}	<h:inputText id="firstName" value="#{aowBean.user.firstName}"/>
-						<!-- #{msg.column_BirthDate}	<h:inputText id="dateOfBirth" value="#{aowBean.user.dateOfBirth}" converter="javax.faces.DateTime" /> -->
 					 	#{msg.column_BirthDate}	<p:calendar value="#{aowBean.user.dateOfBirth}" mode="popup" navigator="true" pattern="dd/MM/yyyy" />	 			
 					</p:panelGrid>
-<!-- 					</h:panelGrid> -->
-					
 				</p:tab>
 				
 				<p:tab title="Partner Details">
-					<!-- <h:panelGrid columns="2"> -->
 					<p:panelGrid columns="2">
 						#{msg.column_Bsn}	<h:inputText id="partnerBsn" value="#{aowBean.user.partner.bsn}"/>
 					</p:panelGrid>
-<!-- 					</h:panelGrid> -->
-					
 				</p:tab>				
 			</p:tabView>
-			<h:commandButton value="Verder" action="overview"/>
+			<p:commandButton value="Verder" action="overview"/>
 		</h:form>
       
 	</ui:define>

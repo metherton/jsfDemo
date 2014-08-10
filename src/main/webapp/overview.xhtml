@@ -17,15 +17,21 @@
 
 	<ui:define name="content">
 		<h:form>
+		<p:fieldset legend="Personal Info">
 			<h:panelGrid columns="2">
 				#{msg.column_Bsn}	<h:outputText id="bsn" value="#{aowBean.user.bsn}"/>
 				#{msg.column_Surname}	<h:outputText id="surname" value="#{aowBean.user.surname}"/>
 				#{msg.column_FirstName}	<h:outputText id="firstName" value="#{aowBean.user.firstName}"/>
 				#{msg.column_BirthDate}	<h:outputText id="dateOfBirth" value="#{aowBean.user.dateOfBirth}"/>
+			</h:panelGrid>
+		</p:fieldset>	
+		<p:fieldset legend="Partner Info">
+			<h:panelGrid columns="2">
 				#{msg.column_Bsn}	<h:outputText id="partnerBsn" value="#{aowBean.user.partner.bsn}"/>
 			</h:panelGrid>
+		</p:fieldset>		
 			<h:panelGrid columns="1">
-				<h:commandButton value="Send" action="#{aowBean.sendToDms}" />
+				<p:commandButton value="Send" action="#{aowBean.sendToDms}" />
 			</h:panelGrid>
 			
 		</h:form>

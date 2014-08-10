@@ -1,13 +1,16 @@
 div .header{
 	font-size: 3em;
+	background-color: #b2cecf;	
 }
 #pageTitle {
 	font-size: 2em;
+	background-color: #d02552;
 }
 
 body {
 	background-color: #50d07d;
 	background-color: #d02552;
 	background-color: #b2cecf;
+	background-color: #FFFFFF;
 	font-family : Arial;
 }
