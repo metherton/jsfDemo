@@ -6,15 +6,19 @@ import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class PartnerTest {
+public class UserTest {
 
 	@Test
 	public void settersAndGetters() {
+		User user = new User();
+		Address address = new Address();
+		address.setCity("Zwolle");
+
 		
-		Partner partner = new Partner();
-		partner.setBsn("123");
 		
-		Assert.assertThat(partner.getBsn(), Matchers.is("123"));
+		user.setAddress(address);
+		
+		assertThat(user.getAddress().getCity(), Matchers.is("Zwolle"));
 	}
 	
 }

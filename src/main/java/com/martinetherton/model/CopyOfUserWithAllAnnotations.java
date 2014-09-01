@@ -16,7 +16,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="T_USER")
-public class User {
+public class CopyOfUserWithAllAnnotations {
 
 	@Id
 	@Column(name="ID")
@@ -45,13 +45,9 @@ public class User {
 	@JoinColumn(name="PARTNER_ID")
 	private Partner partner;
 
-	@OneToOne(cascade = CascadeType.ALL, optional=true)
-	@JoinColumn(name="ADDRESS_ID")	
-	private Address address;	
-
-
-
-
+//	@OneToOne(cascade = CascadeType.ALL, optional=true)
+//	@JoinColumn(name="ADDRESS_ID")	
+//	private Address address;	
 	
     public Date getDateOfBirth() {
 		return dateOfBirth;
@@ -101,19 +97,12 @@ public class User {
 		this.partner = partner;
 	}
 
-	public Address getAddress() {
-		// TODO Auto-generated method stub
-		return address;
-	}
-
-	public void setAddress(Address address) {
-		this.address = address;
-		// TODO Auto-generated method stub
-		
-	}
-
-
-
-
+//	public void setAddress(Address address) {
+//		this.address = address;
+//	}
+//
+//	public Address getAddress() {
+//		return address;
+//	}
 
 }

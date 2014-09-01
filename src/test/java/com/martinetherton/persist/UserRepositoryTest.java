@@ -16,6 +16,7 @@ import org.hamcrest.Matchers;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -46,10 +47,10 @@ public class UserRepositoryTest {
 		User user = repository.getUserWith(bsn);
 		assertNotNull(user);
 		assertThat(user.getFirstName(), Matchers.is("Jack"));
-	//	assertThat(user.getPartner().getBsn(), Matchers.is("42"));
 	}
 
 	@Test
+    @Ignore("not needed for demo")
 	public void insertUser() {
 		User newUser = new User();
 		newUser.setBsn("2");
@@ -58,19 +59,24 @@ public class UserRepositoryTest {
 		newUser.setDateOfBirth(new Date());
 		Partner newPartner = new Partner();
 		newPartner.setBsn("123");
-	//	newPartner.setUser(newUser);
 		newUser.setPartner(newPartner);
 		repository.add(newUser);
 	}	
 
 	@Test
-	public void findUserById() {
+    @Ignore("not needed for demo")
+	public void findPartnerForUserById() {
 		User user = repository.getUserWithId(1L);
 		assertNotNull(user);
 		assertThat(user.getPartner().getBsn(), Matchers.is("66"));
 	}		
 	
-
+	@Test
+	public void findAddressForUserById() {
+		User user = repository.getUserWithId(1L);
+		assertNotNull(user);
+		assertThat(user.getAddress().getCity(), Matchers.is("Zwolle"));
+	}			
 	
     private EntityManagerFactory createEntityManagerFactory() {
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();

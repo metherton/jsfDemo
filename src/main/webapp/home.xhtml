@@ -17,6 +17,11 @@
 	
 	<ui:define name="content">
 		<h:link id="aowLink" value="AOW" outcome="#{msg.goToAow}" />
+		
+		 <h:selectManyCheckbox id="genre" value="#{aowBean.genre}">
+			<f:selectItems value="#{aowBean.genreList}" />		 
+		 </h:selectManyCheckbox>		
+		
 	</ui:define>
 
 </ui:composition>

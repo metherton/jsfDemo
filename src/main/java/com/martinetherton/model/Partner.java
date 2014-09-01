@@ -47,5 +47,4 @@ public class Partner implements Serializable {
 		this.bsn = bsn;
 	}
 
-
 }
